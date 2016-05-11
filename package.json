@@ -1,0 +1,34 @@
+{
+  "name": "the-brink-mongodb",
+  "version": "0.0.1",
+  "description": "Small module to standardize connecting to mongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test",
+    "eslint-pre-commit": "./scripts/eslint-pre-commit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianSilvia/the-brink-mongodb.git"
+  },
+  "keywords": [
+    "mongodb"
+  ],
+  "author": "Brinkbit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrianSilvia/the-brink-mongodb/issues"
+  },
+  "homepage": "https://github.com/BrianSilvia/the-brink-mongodb#readme",
+  "devDependencies": {
+    "brinkbit-style-es6": "^1.0.3",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.4.5",
+    "pre-commit": "^1.1.2"
+  },
+  "pre-commit": [
+    "eslint-pre-commit"
+  ]
+}
