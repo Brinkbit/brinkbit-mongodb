@@ -23,6 +23,7 @@
   "devDependencies": {
     "brinkbit-style-es6": "^1.0.3",
     "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
     "gulp": "^3.9.1",
     "gulp-mocha": "^2.2.0",
     "mocha": "^2.4.5",
@@ -30,5 +31,9 @@
   },
   "pre-commit": [
     "eslint-pre-commit"
-  ]
+  ],
+  "dependencies": {
+    "brinkbit-logger": "^0.2.2",
+    "mongoose": "^4.4.16"
+  }
 }
