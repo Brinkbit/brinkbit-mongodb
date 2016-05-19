@@ -3,7 +3,8 @@
 const chai = require( 'chai' );
 const chaiaspromised = require( 'chai-as-promised' );
 const expect = chai.expect;
-const db = require( '../index.js' );
+const mongoose = require( 'mongoose' );
+const db = require( '../index.js' )( mongoose );
 
 chai.use( chaiaspromised );
 
