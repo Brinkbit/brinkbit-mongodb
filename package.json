@@ -1,5 +1,5 @@
 {
-  "name": "the-brink-mongodb",
+  "name": "brinkbit-mongodb",
   "version": "0.0.1",
   "description": "Small module to standardize connecting to mongoDB",
   "main": "index.js",
