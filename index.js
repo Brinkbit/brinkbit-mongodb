@@ -8,10 +8,11 @@ const mongodb = {
     port: process.env.MONGO_PORT || '27017',
     user: process.env.MONGO_USER,
     pass: process.env.MONGO_PASS,
+    database: process.env.MONGO_DB || 'test', 
 };
 mongodb.uri = mongodb.user && mongodb.pass ?
-    `mongodb://${mongodb.user}:${mongodb.pass}@${mongodb.ip}:${mongodb.port}/test` :
-    `mongodb://${mongodb.ip}:${mongodb.port}/test`;
+    `mongodb://${mongodb.user}:${mongodb.pass}@${mongodb.ip}:${mongodb.port}/${mongodb.database}` :
+    `mongodb://${mongodb.ip}:${mongodb.port}/${mongodb.database}`;
 
 function connect( mongooseConnection ) {
     return new Promise(( resolve, reject ) => {
