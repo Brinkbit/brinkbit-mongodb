@@ -2,7 +2,7 @@
   "name": "brinkbit-mongodb",
   "version": "0.0.1",
   "description": "Small module to standardize connecting to mongoDB",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "debug": "cross-env NODE_ENV=debug mocha test/index.js",
     "test": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text mocha test/index.js",
