@@ -10,7 +10,7 @@ function getConnection( mongodb, connection ) {
     }
     if (
         typeof connection.removeAllListeners === 'function' &&
-        typeof connection.open === 'function'
+        typeof connection.openUri === 'function'
     ) {
         return connection;
     }
@@ -48,7 +48,7 @@ function connect( mongodb, connection ) {
         });
 
         if ( mongooseConnection.readyState === 0 ) {
-            return mongooseConnection.open( mongodb.uri );
+            return mongooseConnection.openUri( mongodb.uri );
         }
         return logger.warning( 'Already connecting' );
     });
