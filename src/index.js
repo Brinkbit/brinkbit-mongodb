@@ -1,5 +1,5 @@
 const mongoose = require( 'mongoose' );
-const logger = require( 'brinkbit-logger' )({ __filename });
+const logger = require( 'brinkbit-logger' ).configure();
 
 function getConnection( mongodb, connection ) {
     if ( !connection ) {
