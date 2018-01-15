@@ -21,7 +21,7 @@ function connect( mongodb, connection ) {
     return new Promise(( resolve, reject ) => {
         const mongooseConnection = getConnection( mongodb, connection );
         if ( !mongooseConnection ) {
-            logger.crit( 'mongoose connection error: "Invalid connection"', {
+            logger.error( 'mongoose connection error: "Invalid connection"', {
                 message: 'Invalid connection',
                 uri: mongodb.uri,
             });
@@ -40,7 +40,7 @@ function connect( mongodb, connection ) {
             resolve( mongooseConnection );
         })
         .removeAllListeners( 'error' ).on( 'error', ( err ) => {
-            logger.crit( `mongoose connection error: "${err.message}"`, {
+            logger.error( `mongoose connection error: "${err.message}"`, {
                 message: err.message,
                 uri: mongodb.uri,
             });
@@ -68,7 +68,7 @@ function disconnect( mongodb, mongooseConnection ) {
             resolve();
         })
         .removeAllListeners( 'error' ).on( 'error', ( err ) => {
-            logger.crit( `mongoose connection error: "${err.message}"`, {
+            logger.error( `mongoose connection error: "${err.message}"`, {
                 message: err.message,
                 uri: mongodb.uri,
             });
